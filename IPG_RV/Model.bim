@@ -1,0 +1,2028 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "actis_db",
+        "connectionString": "Provider=MSDASQL;DSN=PostgreSQL_actis",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "Others"
+          }
+        ]
+      },
+      {
+        "name": "CustomiBI",
+        "connectionString": "Provider=MSDASQL;Persist Security Info=False;Initial Catalog=HSD_ES;DSN=iBI DaaS",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "Others"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "t_rv",
+        "columns": [
+          {
+            "name": "f_irviolation",
+            "dataType": "string",
+            "sourceColumn": "f_irviolation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_sfactor",
+            "dataType": "string",
+            "sourceColumn": "f_sfactor",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_username",
+            "dataType": "string",
+            "sourceColumn": "f_username"
+          },
+          {
+            "name": "f_maxfish",
+            "dataType": "string",
+            "sourceColumn": "f_maxfish"
+          },
+          {
+            "name": "f_sfactorp",
+            "dataType": "string",
+            "sourceColumn": "f_sfactorp"
+          },
+          {
+            "name": "f_pkp",
+            "dataType": "string",
+            "sourceColumn": "f_pkp"
+          },
+          {
+            "name": "f_sh",
+            "dataType": "string",
+            "sourceColumn": "f_sh"
+          },
+          {
+            "name": "f_workspace",
+            "dataType": "string",
+            "sourceColumn": "f_workspace"
+          },
+          {
+            "name": "f_cell",
+            "dataType": "string",
+            "sourceColumn": "f_cell"
+          },
+          {
+            "name": "f_emp",
+            "dataType": "string",
+            "sourceColumn": "f_emp"
+          },
+          {
+            "name": "f_em",
+            "dataType": "string",
+            "sourceColumn": "f_em"
+          },
+          {
+            "name": "f_design",
+            "dataType": "string",
+            "sourceColumn": "f_design"
+          },
+          {
+            "name": "f_shp",
+            "dataType": "string",
+            "sourceColumn": "f_shp"
+          },
+          {
+            "name": "f_pk",
+            "dataType": "string",
+            "sourceColumn": "f_pk"
+          },
+          {
+            "name": "f_site",
+            "dataType": "string",
+            "sourceColumn": "f_site"
+          },
+          {
+            "name": "f_date",
+            "dataType": "dateTime",
+            "sourceColumn": "f_date"
+          },
+          {
+            "name": "f_peakthr",
+            "dataType": "string",
+            "sourceColumn": "f_peakthr"
+          },
+          {
+            "name": "f_project",
+            "dataType": "string",
+            "sourceColumn": "f_project"
+          },
+          {
+            "name": "f_id",
+            "dataType": "int64",
+            "sourceColumn": "f_id"
+          },
+          {
+            "name": "f_title",
+            "dataType": "string",
+            "sourceColumn": "f_title"
+          },
+          {
+            "name": "f_datecreate",
+            "dataType": "dateTime",
+            "sourceColumn": "f_datecreate"
+          },
+          {
+            "name": "f_author",
+            "dataType": "string",
+            "sourceColumn": "f_author"
+          },
+          {
+            "name": "f_block",
+            "dataType": "string",
+            "sourceColumn": "f_block"
+          },
+          {
+            "name": "f_sfactorsw",
+            "dataType": "string",
+            "sourceColumn": "f_sfactorsw"
+          },
+          {
+            "name": "f_hotspotsum",
+            "dataType": "string",
+            "sourceColumn": "f_hotspotsum"
+          },
+          {
+            "name": "f_peakirdrop",
+            "dataType": "string",
+            "sourceColumn": "f_peakirdrop"
+          },
+          {
+            "name": "f_averirdrop",
+            "dataType": "string",
+            "sourceColumn": "f_averirdrop"
+          },
+          {
+            "name": "f_pwr25",
+            "dataType": "int64",
+            "sourceColumn": "f_pwr25"
+          },
+          {
+            "name": "f_signal15",
+            "dataType": "int64",
+            "sourceColumn": "f_signal15"
+          },
+          {
+            "name": "f_emsw",
+            "dataType": "string",
+            "sourceColumn": "f_emsw"
+          },
+          {
+            "name": "f_shsw",
+            "dataType": "string",
+            "sourceColumn": "f_shsw"
+          },
+          {
+            "name": "f_pkpw",
+            "dataType": "string",
+            "sourceColumn": "f_pkpw"
+          },
+          {
+            "name": "f_empw",
+            "dataType": "string",
+            "sourceColumn": "f_empw"
+          },
+          {
+            "name": "f_shpw",
+            "dataType": "string",
+            "sourceColumn": "f_shpw"
+          },
+          {
+            "name": "f_pksw",
+            "dataType": "string",
+            "sourceColumn": "f_pksw"
+          },
+          {
+            "name": "f_host",
+            "dataType": "string",
+            "sourceColumn": "f_host"
+          },
+          {
+            "name": "f_mode",
+            "dataType": "string",
+            "sourceColumn": "f_mode"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Query",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select f_irviolation,f_sfactor,f_sfactorp,f_pkp,f_sh,f_workspace,f_username,f_cell,f_emp,f_em,f_design,f_shp,f_pk,f_site,f_date,f_peakthr,f_project,f_id,f_title,f_datecreate,",
+                "f_author,f_block,f_sfactorsw,f_hotspotsum,f_maxfish,f_peakirdrop,f_averirdrop,f_pwr25,f_signal15,f_emsw,f_shsw,f_pkpw,f_empw,f_shpw,f_pksw,f_host,f_mode",
+                "from t_rv"
+              ],
+              "dataSource": "actis_db"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select f_irviolation,f_sfactor,f_sfactorp,f_pkp,f_sh,f_workspace,f_username,f_cell,f_emp,f_em,f_design,f_shp,f_pk,f_site,f_date,f_peakthr,f_project,f_id,f_title,f_datecreate,",
+                  "f_author,f_block,f_sfactorsw,f_hotspotsum,f_maxfish,f_peakirdrop,f_averirdrop,f_pwr25,f_signal15,f_emsw,f_shsw,f_pkpw,f_empw,f_shpw,f_pksw,f_host,f_mode",
+                  "from t_rv</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select f_irviolation,f_sfactor,f_sfactorp,f_pkp,f_sh,f_workspace,f_username,f_cell,f_emp,f_em,f_design,f_shp,f_pk,f_site,f_date,f_peakthr,f_project,f_id,f_title,f_datecreate,",
+              "f_author,f_block,f_sfactorsw,f_hotspotsum,f_maxfish,f_peakirdrop,f_averirdrop,f_pwr25,f_signal15,f_emsw,f_shsw,f_pkpw,f_empw,f_shpw,f_pksw,f_host,f_mode",
+              "from t_rv"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Query"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select f_irviolation,f_sfactor,f_sfactorp,f_pkp,f_sh,f_workspace,f_username,f_cell,f_emp,f_em,f_design,f_shp,f_pk,f_site,f_date,f_peakthr,f_project,f_id,f_title,f_datecreate,",
+              "f_author,f_block,f_sfactorsw,f_hotspotsum,f_maxfish,f_peakirdrop,f_averirdrop,f_pwr25,f_signal15,f_emsw,f_shsw,f_pkpw,f_empw,f_shpw,f_pksw,f_host,f_mode",
+              "from t_rv</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tree_cell",
+        "columns": [
+          {
+            "name": "f_top_cell",
+            "dataType": "string",
+            "sourceColumn": "f_top_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "rv_cell",
+            "dataType": "string",
+            "sourceColumn": "rv_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "tree_cell",
+            "dataType": "string",
+            "sourceColumn": "tree_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_father",
+            "dataType": "string",
+            "sourceColumn": "f_father",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_level",
+            "dataType": "int64",
+            "sourceColumn": "f_level",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "f_irviolation",
+            "dataType": "string",
+            "sourceColumn": "f_irviolation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_date",
+            "dataType": "dateTime",
+            "sourceColumn": "f_date",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "f_datecreate",
+            "dataType": "dateTime",
+            "sourceColumn": "f_datecreate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "f_mode",
+            "dataType": "string",
+            "sourceColumn": "f_mode",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_commit",
+            "dataType": "string",
+            "sourceColumn": "f_commit",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Calculated Column 1",
+            "dataType": "int64",
+            "isDataTypeInferred": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tree_cell",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select tree.f_top_cell,rv.f_cell as rv_cell, tree.f_cell as tree_cell, tree.f_father, tree.f_level, rv.f_irviolation, rv.f_date, rv.f_datecreate, rv.f_mode, rv.f_commit",
+                "from t_cell_tree as tree",
+                "right join t_rv rv on rv.f_cell = tree.f_cell ",
+                "where tree.f_run_type = 'rv'",
+                "--and f_level =3",
+                "--and tree.f_project = 'FLC_TC2'",
+                "and tree.f_cell is not null",
+                "and tree.f_father IN (Select distinct f_cell from t_rv )",
+                "--and f_father = 'ethpllshr_rxdco'",
+                "order by tree.f_level"
+              ],
+              "dataSource": "actis_db"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select tree.f_top_cell,rv.f_cell as rv_cell, tree.f_cell as tree_cell, tree.f_father, tree.f_level, rv.f_irviolation, rv.f_date, rv.f_datecreate, rv.f_mode, rv.f_commit",
+                  "from t_cell_tree as tree",
+                  "right join t_rv rv on rv.f_cell = tree.f_cell ",
+                  "where tree.f_run_type = 'rv'",
+                  "--and f_level =3",
+                  "--and tree.f_project = 'FLC_TC2'",
+                  "and tree.f_cell is not null",
+                  "and tree.f_father IN (Select distinct f_cell from t_rv )",
+                  "--and f_father = 'ethpllshr_rxdco'",
+                  "order by tree.f_level</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select tree.f_top_cell,rv.f_cell as rv_cell, tree.f_cell as tree_cell, tree.f_father, tree.f_level, rv.f_irviolation, rv.f_date, rv.f_datecreate, rv.f_mode, rv.f_commit",
+              "from t_cell_tree as tree",
+              "right join t_rv rv on rv.f_cell = tree.f_cell ",
+              "where tree.f_run_type = 'rv'",
+              "--and f_level =3",
+              "--and tree.f_project = 'FLC_TC2'",
+              "and tree.f_cell is not null",
+              "and tree.f_father IN (Select distinct f_cell from t_rv )",
+              "--and f_father = 'ethpllshr_rxdco'",
+              "order by tree.f_level"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tree_cell"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select tree.f_top_cell,rv.f_cell as rv_cell, tree.f_cell as tree_cell, tree.f_father, tree.f_level, rv.f_irviolation, rv.f_date, rv.f_datecreate, rv.f_mode, rv.f_commit",
+              "from t_cell_tree as tree",
+              "right join t_rv rv on rv.f_cell = tree.f_cell ",
+              "where tree.f_run_type = 'rv'",
+              "--and f_level =3",
+              "--and tree.f_project = 'FLC_TC2'",
+              "and tree.f_cell is not null",
+              "and tree.f_father IN (Select distinct f_cell from t_rv )",
+              "--and f_father = 'ethpllshr_rxdco'",
+              "order by tree.f_level</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "alert_table",
+        "columns": [
+          {
+            "name": "replace",
+            "dataType": "string",
+            "sourceColumn": "replace",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "mail_md",
+            "dataType": "string",
+            "sourceColumn": "mail_md",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "replace1",
+            "dataType": "string",
+            "sourceColumn": "replace1",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "mail_de",
+            "dataType": "string",
+            "sourceColumn": "mail_de",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "replace2",
+            "dataType": "string",
+            "sourceColumn": "replace2",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "mail_leader_de",
+            "dataType": "string",
+            "sourceColumn": "mail_leader_de",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "cell_role",
+            "dataType": "string",
+            "sourceColumn": "cell_role",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_notify",
+            "dataType": "string",
+            "sourceColumn": "f_notify",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_cell",
+            "dataType": "string",
+            "sourceColumn": "f_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_block",
+            "dataType": "string",
+            "sourceColumn": "f_block",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_irviolation",
+            "dataType": "string",
+            "sourceColumn": "f_irviolation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_rvviolation",
+            "dataType": "string",
+            "sourceColumn": "f_rvviolation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_commit",
+            "dataType": "string",
+            "sourceColumn": "f_commit",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_rv_log",
+            "dataType": "string",
+            "sourceColumn": "f_rv_log",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_site",
+            "dataType": "string",
+            "sourceColumn": "f_site",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_waive",
+            "dataType": "string",
+            "sourceColumn": "f_waive",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_status_comment",
+            "dataType": "string",
+            "sourceColumn": "f_status_comment",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_layout_status",
+            "dataType": "string",
+            "sourceColumn": "f_layout_status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_em",
+            "dataType": "string",
+            "sourceColumn": "f_em",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_emsw",
+            "dataType": "string",
+            "sourceColumn": "f_emsw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_emth",
+            "dataType": "string",
+            "sourceColumn": "f_emth",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_sh",
+            "dataType": "string",
+            "sourceColumn": "f_sh",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_shsw",
+            "dataType": "string",
+            "sourceColumn": "f_shsw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_shth",
+            "dataType": "string",
+            "sourceColumn": "f_shth",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_pk",
+            "dataType": "string",
+            "sourceColumn": "f_pk",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_pksw",
+            "dataType": "string",
+            "sourceColumn": "f_pksw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_pkth",
+            "dataType": "string",
+            "sourceColumn": "f_pkth",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_emp",
+            "dataType": "string",
+            "sourceColumn": "f_emp",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_empw",
+            "dataType": "string",
+            "sourceColumn": "f_empw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_shp",
+            "dataType": "string",
+            "sourceColumn": "f_shp",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_shpw",
+            "dataType": "string",
+            "sourceColumn": "f_shpw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_pkp",
+            "dataType": "string",
+            "sourceColumn": "f_pkp",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_pkpw",
+            "dataType": "string",
+            "sourceColumn": "f_pkpw",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_vcc_peak",
+            "dataType": "string",
+            "sourceColumn": "f_vcc_peak",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_vss_peak",
+            "dataType": "string",
+            "sourceColumn": "f_vss_peak",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_peakirdrop",
+            "dataType": "string",
+            "sourceColumn": "f_peakirdrop",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_top_metal_layer",
+            "dataType": "string",
+            "sourceColumn": "f_top_metal_layer",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_ploc_metal",
+            "dataType": "string",
+            "sourceColumn": "f_ploc_metal",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_vcc_aver",
+            "dataType": "string",
+            "sourceColumn": "f_vcc_aver",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_vss_aver",
+            "dataType": "string",
+            "sourceColumn": "f_vss_aver",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_averirdrop",
+            "dataType": "string",
+            "sourceColumn": "f_averirdrop",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_avg_curr",
+            "dataType": "string",
+            "sourceColumn": "f_avg_curr",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_tmp_em",
+            "dataType": "string",
+            "sourceColumn": "f_tmp_em",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_tmp_ex",
+            "dataType": "string",
+            "sourceColumn": "f_tmp_ex",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_lifetime_years",
+            "dataType": "string",
+            "sourceColumn": "f_lifetime_years",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_date",
+            "dataType": "dateTime",
+            "sourceColumn": "f_date",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "f_method",
+            "dataType": "string",
+            "sourceColumn": "f_method",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_mode",
+            "dataType": "string",
+            "sourceColumn": "f_mode",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_mode_value",
+            "dataType": "int64",
+            "sourceColumn": "f_mode_value",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_mode_thr",
+            "dataType": "int64",
+            "sourceColumn": "f_mode_thr",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "f_project_connectivity",
+            "dataType": "string",
+            "sourceColumn": "f_project_connectivity"
+          },
+          {
+            "type": "calculated",
+            "name": "cell_project",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(alert_table[f_cell],alert_table[f_project_connectivity])"
+          },
+          {
+            "type": "calculated",
+            "name": "f_date_yyyyww",
+            "dataType": "int64",
+            "isDataTypeInferred": false,
+            "expression": "YEAR(alert_table[f_date])&IF(WEEKNUM(alert_table[f_date])<10,\"0\",\"\")&WEEKNUM(alert_table[f_date])"
+          },
+          {
+            "type": "calculated",
+            "name": "date_latest",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "IF([f_date] = CALCULATE(max(alert_table[f_date]), FILTER(alert_Table, alert_table[f_cell] = EARLIEST(alert_table[f_cell]) && alert_table[f_commit] = \"1\" )), \"latest\", [f_date_yyyyww]&\"\")",
+              "",
+              "// need to flag the latest results per cell per commit where commit indicates that it is archive run so want to latest archive run per each cell"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "age_in_weeks",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "DATEDIFF(alert_table[f_date],NOW(),DAY)/7",
+            "formatString": "0.00"
+          },
+          {
+            "type": "calculated",
+            "name": "age_in_wk_category",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(alert_table[age_in_weeks]<=7,\"Less than 1 week\",IF(alert_table[age_in_weeks]<=14,\"Between 1 & 2 week\",IF(alert_table[age_in_weeks]<=21,\"Between 2 & 3 week\",IF(alert_table[age_in_weeks]>21,\"Greater than 3 weeks\",\"Greater than 3 weeks\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "f_layout_summary",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(alert_table[f_layout_status]==\"Run - waived\",\"Run\",IF(alert_table[f_layout_status]==\"Run - clean\",\"Run\",IF(alert_table[f_layout_status]==\"Run - dirty\",\"Run\",IF(alert_table[f_layout_status]==\"Error - not found/archived\",\"Error\",IF(alert_table[f_layout_status]==\"Ready for RV run\",\"Run\",\"Waiting\")))))"
+          },
+          {
+            "type": "calculated",
+            "name": "Current_WW",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(YEAR(NOW()),WEEKNUM(NOW(),2))"
+          },
+          {
+            "type": "calculated",
+            "name": "Latest_val",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "IF(alert_table[date_latest]=\"latest\",1,0)"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "alert_table",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct replace(hrds_md.mailname_md,',','') ,hrds_md.mail_md, ",
+                "replace(hrds_de.mailname_de,',','') as replace1 ,hrds_de.mail_de,  ",
+                "replace(hrds_leader_de.mailname_leader_de,',','') as replace2,",
+                "hrds_leader_de.mail_leader_de, ",
+                "case when cells.f_waive is not null then 'clean' when rv.f_cell is null then 'miss' when rv.f_irviolation ='DIRTY' or rv.f_rvviolation ='DIRTY' ",
+                "then 'dirty' else 'clean' end as cell_role, ",
+                "cells.f_notify, cells.f_cell, ",
+                "f_block, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site,f_waive,f_status_comment,f_layout_status, f_em, f_emsw, f_emth, ",
+                "f_sh, f_shsw, f_shth, f_pk, f_pksw,f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,",
+                "f_ploc_metal, f_vcc_aver, f_vss_aver, f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_project_connectivity,",
+                "f_date, cells.f_method /*the  planned mode*/, rv.f_mode /*the actual mode*/, ",
+                "case when lower(rv.f_mode) = 'vectorless' and  lower(cells.f_method) like '%vectorless%' then '0' when lower(rv.f_mode) = 'vector' and  lower(cells.f_method)",
+                "like '%vectorbased%' then '0' else '1' end as f_mode_value, 0 as f_mode_thr",
+                "from (select distinct f_cell, f_de_owner, f_md_owner, f_de_leader,f_waive,f_status_comment,f_layout_status,f_method, f_notify ",
+                "\t  from t_rv_owners where f_etime is null and f_project = 'flc') as cells ",
+                "left join (select * from (select * ,row_number() over (partition by f_cell order by is_archive desc, f_date desc) as row_priority ",
+                "from (select distinct f_id, f_block, f_cell, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site, f_em, f_emsw, f_emth, f_sh, f_shsw, f_shth, f_pk, f_pksw, ",
+                "\t  f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,f_ploc_metal, f_vcc_aver, f_vss_aver, ",
+                "\t  f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_date, f_mode, f_project_connectivity,",
+                "\t  max(f_date) over (PARTITION BY f_cell ) as max_date, case when f_rv_log like '|archive|'then 1 else 0 end as is_archive ",
+                "\t  from t_rv where f_rv_log not like '|ams.gen2_tc|' and f_rv_log not like '|BRK2G2::brk2_tc2|' ",
+                "\t  and f_rv_log not like '|ams.brk2_tc2|' ) as data3) as data2  ) as rv   -- f_project_connectivity = 'FLC_TC2'",
+                "on cells.f_cell = rv.f_cell ",
+                "left join (select distinct  f_shortid as md_id, f_ccmailname as mailname_md, f_email as mail_md from t_hrds where f_etime is null) as hrds_md ",
+                "on cells.f_md_owner = hrds_md.md_id ",
+                "left join (select distinct f_shortid as de_id, f_ccmailname as mailname_de, f_email as mail_de from t_hrds where f_etime is null ) as hrds_de ",
+                "on cells.f_de_owner = hrds_de.de_id ",
+                "left join (select distinct f_shortid as de_leader_id, f_ccmailname as mailname_leader_de, f_email as mail_leader_de from t_hrds where f_etime is null ) as hrds_leader_de ",
+                "on cells.f_de_leader = hrds_leader_de.de_leader_id"
+              ],
+              "dataSource": "actis_db"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct replace(hrds_md.mailname_md,',','') ,hrds_md.mail_md, ",
+                  "replace(hrds_de.mailname_de,',','') as replace1 ,hrds_de.mail_de,  ",
+                  "replace(hrds_leader_de.mailname_leader_de,',','') as replace2,",
+                  "hrds_leader_de.mail_leader_de, ",
+                  "case when cells.f_waive is not null then 'clean' when rv.f_cell is null then 'miss' when rv.f_irviolation ='DIRTY' or rv.f_rvviolation ='DIRTY' ",
+                  "then 'dirty' else 'clean' end as cell_role, ",
+                  "cells.f_notify, cells.f_cell, ",
+                  "f_block, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site,f_waive,f_status_comment,f_layout_status, f_em, f_emsw, f_emth, ",
+                  "f_sh, f_shsw, f_shth, f_pk, f_pksw,f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,",
+                  "f_ploc_metal, f_vcc_aver, f_vss_aver, f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_project_connectivity,",
+                  "f_date, cells.f_method /*the  planned mode*/, rv.f_mode /*the actual mode*/, ",
+                  "case when lower(rv.f_mode) = 'vectorless' and  lower(cells.f_method) like '%vectorless%' then '0' when lower(rv.f_mode) = 'vector' and  lower(cells.f_method)",
+                  "like '%vectorbased%' then '0' else '1' end as f_mode_value, 0 as f_mode_thr",
+                  "from (select distinct f_cell, f_de_owner, f_md_owner, f_de_leader,f_waive,f_status_comment,f_layout_status,f_method, f_notify ",
+                  "\t  from t_rv_owners where f_etime is null and f_project = 'flc') as cells ",
+                  "left join (select * from (select * ,row_number() over (partition by f_cell order by is_archive desc, f_date desc) as row_priority ",
+                  "from (select distinct f_id, f_block, f_cell, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site, f_em, f_emsw, f_emth, f_sh, f_shsw, f_shth, f_pk, f_pksw, ",
+                  "\t  f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,f_ploc_metal, f_vcc_aver, f_vss_aver, ",
+                  "\t  f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_date, f_mode, f_project_connectivity,",
+                  "\t  max(f_date) over (PARTITION BY f_cell ) as max_date, case when f_rv_log like '|archive|'then 1 else 0 end as is_archive ",
+                  "\t  from t_rv where f_rv_log not like '|ams.gen2_tc|' and f_rv_log not like '|BRK2G2::brk2_tc2|' ",
+                  "\t  and f_rv_log not like '|ams.brk2_tc2|' ) as data3) as data2  ) as rv   -- f_project_connectivity = 'FLC_TC2'",
+                  "on cells.f_cell = rv.f_cell ",
+                  "left join (select distinct  f_shortid as md_id, f_ccmailname as mailname_md, f_email as mail_md from t_hrds where f_etime is null) as hrds_md ",
+                  "on cells.f_md_owner = hrds_md.md_id ",
+                  "left join (select distinct f_shortid as de_id, f_ccmailname as mailname_de, f_email as mail_de from t_hrds where f_etime is null ) as hrds_de ",
+                  "on cells.f_de_owner = hrds_de.de_id ",
+                  "left join (select distinct f_shortid as de_leader_id, f_ccmailname as mailname_leader_de, f_email as mail_leader_de from t_hrds where f_etime is null ) as hrds_leader_de ",
+                  "on cells.f_de_leader = hrds_leader_de.de_leader_id</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Dirty_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , FILTER(",
+              "SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1",
+              "                ), ",
+              "",
+              "",
+              "alert_table[f_cell],   alert_table[f_irviolation] ),  alert_table[f_irviolation] = \"DIRTY\" ",
+              "",
+              ") )"
+            ]
+          },
+          {
+            "name": "Clean_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , FILTER(",
+              "SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1",
+              "                ), ",
+              "",
+              "",
+              "alert_table[f_cell],   alert_table[f_irviolation] ),  alert_table[f_irviolation] = \"CLEAN\" ",
+              "",
+              ") )"
+            ]
+          },
+          {
+            "name": "Dirty_count_backup",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "                Distinctcount(alert_table[f_cell]), ",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1",
+              "                ), ",
+              "                FILTER(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0)),",
+              "                FILTER(alert_table,alert_table[f_irviolation] = \"DIRTY\")",
+              ") ",
+              "",
+              ""
+            ]
+          },
+          {
+            "name": "Clean_Per",
+            "expression": "([Clean_count]/ ([Dirty_count]+[Clean_count])) + 0",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Dirty_Per",
+            "expression": "([Dirty_count]/ ([Dirty_count]+[Clean_count]))",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Run_Dirty_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(ALLSELECTED(alert_table), ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 &&  alert_table[f_layout_status] = \"Run - dirty\" ",
+              "               ),   ",
+              "//alert_table[f_cell],   alert_table[f_layout_status] ), ",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              ")"
+            ]
+          },
+          {
+            "name": "Run_Clean_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 && alert_table[f_layout_status] = \"Run - clean\" ",
+              "               ), ",
+              "",
+              "",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              " )"
+            ]
+          },
+          {
+            "name": "Run_Waived_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 &&  alert_table[f_layout_status] = \"Run - waived\" ",
+              "                ), ",
+              "",
+              "",
+              "  filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              "",
+              ") "
+            ]
+          },
+          {
+            "name": "Ready_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) ,",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 && alert_table[f_layout_status] = \"Ready for RV run\" ",
+              "                ), ",
+              "",
+              "",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              ") "
+            ]
+          },
+          {
+            "name": "Error_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 &&  alert_table[f_layout_status] = \"Error - not found/archived\" ",
+              "                ), ",
+              "",
+              "",
+              "  filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              "",
+              ") "
+            ]
+          },
+          {
+            "name": "Wait_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) ,",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 && alert_table[f_layout_status] = \"Waiting for children to run\" ",
+              "                ), ",
+              "",
+              "",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              " )",
+              ""
+            ]
+          },
+          {
+            "name": "layout_Clean_Per",
+            "expression": "(([Run_Clean_count]+[Run_Waived_count])/ ([Run_Clean_count]+[Run_Dirty_count]+[Run_Waived_count]+[Ready_count]+[Error_count]+[Wait_count])) + 0",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Age_1week_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 && alert_table[age_in_wk_category] = \"Less than 1 week\" ",
+              "                ), ",
+              "",
+              "",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              ") ",
+              ""
+            ]
+          },
+          {
+            "name": "Age_1_2week_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 && alert_table[age_in_wk_category] = \"Between 1 & 2 week\" ",
+              "                ), ",
+              "",
+              "",
+              "  filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              "",
+              ") ",
+              ""
+            ]
+          },
+          {
+            "name": "Age_2_3week_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 &&   alert_table[age_in_wk_category] = \"Between 2 & 3 week\" ",
+              "                ), ",
+              "",
+              "",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              ") ",
+              ""
+            ]
+          },
+          {
+            "name": "Age_3weeks_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) ,",
+              "//SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 &&  alert_table[age_in_wk_category] = \"Greater than 3 weeks\" ",
+              "                ), ",
+              "",
+              "",
+              "  filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              "",
+              ") ",
+              ""
+            ]
+          },
+          {
+            "name": "Measure 1",
+            "expression": "DISTINCTCOUNT(alert_table[f_cell])"
+          },
+          {
+            "name": "total_Cell_count",
+            "expression": [
+              "DISTINCTCOUNT(Distinct_cell[f_cell])",
+              "",
+              "//DISTINCTCOUNT(t_cell_tree_path[f_cell])"
+            ]
+          },
+          {
+            "name": "No_Data_Count",
+            "expression": "[total_Cell_count] - [Run_Clean_count] - [Run_Dirty_count] - [Ready_count] - [Run_Waived_count] - [Error_count] - [Wait_count]"
+          },
+          {
+            "name": "No_Data_Count_age",
+            "expression": "[total_Cell_count] - [Age_1week_count] - [Age_1_2week_count] - [Age_2_3week_count] - [Age_3weeks_count]"
+          },
+          {
+            "name": "Data_refresh",
+            "expression": " MAX(alert_table[f_date])",
+            "formatString": "General Date"
+          },
+          {
+            "name": "Mode_Diff",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , FILTER(",
+              "SUMMARIZE(",
+              "                filter(alert_table, ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= LASTNONBLANK(Queryww[Intel Year-Work Week], 0))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1",
+              "                ), ",
+              "",
+              "",
+              "alert_table[f_cell],   alert_table[f_mode_value] ),  alert_table[f_mode_value] = 1 ",
+              "",
+              ") )"
+            ]
+          },
+          {
+            "name": "status_count",
+            "expression": [
+              " CALCULATE( Distinctcount(alert_table[f_cell]) , ",
+              "//SUMMARIZE(",
+              "                filter(ALLSELECTED(alert_table), ",
+              "                                rankx(",
+              "                                                CALCULATETABLE(alert_table,  ",
+              "                                                                filter(alert_table, alert_table[f_cell]= EARLIER(alert_table[f_cell])), ",
+              "                                                                filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "                                                ), ",
+              "                                                alert_table[f_date_yyyyww] , , DESC) = 1 ",
+              "                                                               ),   ",
+              "//alert_table[f_cell],   alert_table[f_layout_status] ), ",
+              "filter(alert_table,alert_table[f_date_yyyyww]<= MAX(Queryww[Intel Year-Work Week]))",
+              "",
+              ")"
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct replace(hrds_md.mailname_md,',','') ,hrds_md.mail_md, ",
+              "replace(hrds_de.mailname_de,',','') as replace1 ,hrds_de.mail_de,  ",
+              "replace(hrds_leader_de.mailname_leader_de,',','') as replace2,",
+              "hrds_leader_de.mail_leader_de, ",
+              "case when cells.f_waive is not null then 'clean' when rv.f_cell is null then 'miss' when rv.f_irviolation ='DIRTY' or rv.f_rvviolation ='DIRTY' ",
+              "then 'dirty' else 'clean' end as cell_role, ",
+              "cells.f_notify, cells.f_cell, ",
+              "f_block, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site,f_waive,f_status_comment,f_layout_status, f_em, f_emsw, f_emth, ",
+              "f_sh, f_shsw, f_shth, f_pk, f_pksw,f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,",
+              "f_ploc_metal, f_vcc_aver, f_vss_aver, f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_project_connectivity,",
+              "f_date, cells.f_method /*the  planned mode*/, rv.f_mode /*the actual mode*/, ",
+              "case when lower(rv.f_mode) = 'vectorless' and  lower(cells.f_method) like '%vectorless%' then '0' when lower(rv.f_mode) = 'vector' and  lower(cells.f_method)",
+              "like '%vectorbased%' then '0' else '1' end as f_mode_value, 0 as f_mode_thr",
+              "from (select distinct f_cell, f_de_owner, f_md_owner, f_de_leader,f_waive,f_status_comment,f_layout_status,f_method, f_notify ",
+              "\t  from t_rv_owners where f_etime is null and f_project = 'flc') as cells ",
+              "left join (select * from (select * ,row_number() over (partition by f_cell order by is_archive desc, f_date desc) as row_priority ",
+              "from (select distinct f_id, f_block, f_cell, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site, f_em, f_emsw, f_emth, f_sh, f_shsw, f_shth, f_pk, f_pksw, ",
+              "\t  f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,f_ploc_metal, f_vcc_aver, f_vss_aver, ",
+              "\t  f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_date, f_mode, f_project_connectivity,",
+              "\t  max(f_date) over (PARTITION BY f_cell ) as max_date, case when f_rv_log like '|archive|'then 1 else 0 end as is_archive ",
+              "\t  from t_rv where f_rv_log not like '|ams.gen2_tc|' and f_rv_log not like '|BRK2G2::brk2_tc2|' ",
+              "\t  and f_rv_log not like '|ams.brk2_tc2|' ) as data3) as data2  ) as rv   -- f_project_connectivity = 'FLC_TC2'",
+              "on cells.f_cell = rv.f_cell ",
+              "left join (select distinct  f_shortid as md_id, f_ccmailname as mailname_md, f_email as mail_md from t_hrds where f_etime is null) as hrds_md ",
+              "on cells.f_md_owner = hrds_md.md_id ",
+              "left join (select distinct f_shortid as de_id, f_ccmailname as mailname_de, f_email as mail_de from t_hrds where f_etime is null ) as hrds_de ",
+              "on cells.f_de_owner = hrds_de.de_id ",
+              "left join (select distinct f_shortid as de_leader_id, f_ccmailname as mailname_leader_de, f_email as mail_leader_de from t_hrds where f_etime is null ) as hrds_leader_de ",
+              "on cells.f_de_leader = hrds_leader_de.de_leader_id"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "alert_table"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct replace(hrds_md.mailname_md,',','') ,hrds_md.mail_md, ",
+              "replace(hrds_de.mailname_de,',','') as replace1 ,hrds_de.mail_de,  ",
+              "replace(hrds_leader_de.mailname_leader_de,',','') as replace2,",
+              "hrds_leader_de.mail_leader_de, ",
+              "case when cells.f_waive is not null then 'clean' when rv.f_cell is null then 'miss' when rv.f_irviolation ='DIRTY' or rv.f_rvviolation ='DIRTY' ",
+              "then 'dirty' else 'clean' end as cell_role, ",
+              "cells.f_notify, cells.f_cell, ",
+              "f_block, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site,f_waive,f_status_comment,f_layout_status, f_em, f_emsw, f_emth, ",
+              "f_sh, f_shsw, f_shth, f_pk, f_pksw,f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,",
+              "f_ploc_metal, f_vcc_aver, f_vss_aver, f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_project_connectivity,",
+              "f_date, cells.f_method /*the  planned mode*/, rv.f_mode /*the actual mode*/, ",
+              "case when lower(rv.f_mode) = 'vectorless' and  lower(cells.f_method) like '%vectorless%' then '0' when lower(rv.f_mode) = 'vector' and  lower(cells.f_method)",
+              "like '%vectorbased%' then '0' else '1' end as f_mode_value, 0 as f_mode_thr",
+              "from (select distinct f_cell, f_de_owner, f_md_owner, f_de_leader,f_waive,f_status_comment,f_layout_status,f_method, f_notify ",
+              "\t  from t_rv_owners where f_etime is null and f_project = 'flc') as cells ",
+              "left join (select * from (select * ,row_number() over (partition by f_cell order by is_archive desc, f_date desc) as row_priority ",
+              "from (select distinct f_id, f_block, f_cell, f_irviolation,f_rvviolation,f_commit,f_rv_log,f_site, f_em, f_emsw, f_emth, f_sh, f_shsw, f_shth, f_pk, f_pksw, ",
+              "\t  f_pkth, f_emp,f_empw, f_shp, f_shpw, f_pkp,f_pkpw, f_vcc_peak,f_vss_peak,f_peakirdrop,f_top_metal_layer,f_ploc_metal, f_vcc_aver, f_vss_aver, ",
+              "\t  f_averIRdrop, f_avg_curr, f_tmp_em, f_tmp_ex, f_lifetime_years, f_date, f_mode, f_project_connectivity,",
+              "\t  max(f_date) over (PARTITION BY f_cell ) as max_date, case when f_rv_log like '|archive|'then 1 else 0 end as is_archive ",
+              "\t  from t_rv where f_rv_log not like '|ams.gen2_tc|' and f_rv_log not like '|BRK2G2::brk2_tc2|' ",
+              "\t  and f_rv_log not like '|ams.brk2_tc2|' ) as data3) as data2  ) as rv   -- f_project_connectivity = 'FLC_TC2'",
+              "on cells.f_cell = rv.f_cell ",
+              "left join (select distinct  f_shortid as md_id, f_ccmailname as mailname_md, f_email as mail_md from t_hrds where f_etime is null) as hrds_md ",
+              "on cells.f_md_owner = hrds_md.md_id ",
+              "left join (select distinct f_shortid as de_id, f_ccmailname as mailname_de, f_email as mail_de from t_hrds where f_etime is null ) as hrds_de ",
+              "on cells.f_de_owner = hrds_de.de_id ",
+              "left join (select distinct f_shortid as de_leader_id, f_ccmailname as mailname_leader_de, f_email as mail_leader_de from t_hrds where f_etime is null ) as hrds_leader_de ",
+              "on cells.f_de_leader = hrds_leader_de.de_leader_id</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "t_cell_tree_path",
+        "columns": [
+          {
+            "name": "f_cell",
+            "dataType": "string",
+            "sourceColumn": "f_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_father",
+            "dataType": "string",
+            "sourceColumn": "f_father",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "parent1",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),1)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent2",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),2)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent3",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),3)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent4",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),4)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent5",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),5)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent6",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),6)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent7",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),7)"
+          },
+          {
+            "name": "f_project",
+            "dataType": "string",
+            "sourceColumn": "f_project"
+          },
+          {
+            "type": "calculated",
+            "name": "parent8",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),8)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent9",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),9)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent10",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),10)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent11",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),11)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent12",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),12)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent13",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),13)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent14",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),14)"
+          },
+          {
+            "type": "calculated",
+            "name": "parent15",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "PATHITEM(SUBSTITUTE(t_cell_tree_path[f_hierarchy],\":::\",\"|\"),15)"
+          },
+          {
+            "type": "calculated",
+            "name": "Calculated Column 1",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(t_cell_tree_path[f_cell],t_cell_tree_path[f_project])"
+          },
+          {
+            "name": "f_hierarchy",
+            "dataType": "string",
+            "sourceColumn": "f_hierarchy"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "t_cell_tree_path",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select    f_hierarchy,",
+                "\tf_cell,",
+                "          f_father,",
+                "         f_project",
+                "FROM t_cell_tree",
+                "order by f_index",
+                "",
+                "",
+                "/* -- original query that built the hierarchy",
+                "",
+                "WITH RECURSIVE generation AS (",
+                "    SELECT f_cell,",
+                "         f_father,",
+                "         f_level,",
+                "f_project,",
+                "         0 AS generation_number, ",
+                "\t     f_cell as order_Seq ",
+                "    FROM t_cell_tree",
+                "    WHERE f_level = -1",
+                "\tand f_project = 'flc' --f_project = 'FLC_TC2'",
+                " UNION ALL",
+                "     SELECT child.f_cell,",
+                "         child.f_father,",
+                "         child.f_level,",
+                "         child.f_project,",
+                "         generation_number+1 AS generation_number,",
+                "\t     (order_seq || '||'||  child.f_cell ) as order_Seq",
+                "    FROM t_cell_tree child",
+                "    JOIN generation g",
+                "      ON g.f_cell = child.f_father",
+                "    where  child.f_project = 'flc'\t--child.f_project = 'FLC_TC2'\t",
+                ")",
+                "SELECT distinct order_Seq, ",
+                " --       generation_number,",
+                "          f_cell,",
+                "          f_father,",
+                "         f_project,",
+                "--      f_level,",
+                "        RIGHT('- - - - - - - - - - - -',generation_number*3) || f_cell",
+                "     AS parent_child_tree",
+                "FROM generation",
+                "order by order_Seq ;",
+                "",
+                "*/"
+              ],
+              "dataSource": "actis_db"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select    f_hierarchy,",
+                  "\tf_cell,",
+                  "          f_father,",
+                  "         f_project",
+                  "FROM t_cell_tree",
+                  "order by f_index",
+                  "",
+                  "",
+                  "/* -- original query that built the hierarchy",
+                  "",
+                  "WITH RECURSIVE generation AS (",
+                  "    SELECT f_cell,",
+                  "         f_father,",
+                  "         f_level,",
+                  "f_project,",
+                  "         0 AS generation_number, ",
+                  "\t     f_cell as order_Seq ",
+                  "    FROM t_cell_tree",
+                  "    WHERE f_level = -1",
+                  "\tand f_project = 'flc' --f_project = 'FLC_TC2'",
+                  " UNION ALL",
+                  "     SELECT child.f_cell,",
+                  "         child.f_father,",
+                  "         child.f_level,",
+                  "         child.f_project,",
+                  "         generation_number+1 AS generation_number,",
+                  "\t     (order_seq || '||'||  child.f_cell ) as order_Seq",
+                  "    FROM t_cell_tree child",
+                  "    JOIN generation g",
+                  "      ON g.f_cell = child.f_father",
+                  "    where  child.f_project = 'flc'\t--child.f_project = 'FLC_TC2'\t",
+                  ")",
+                  "SELECT distinct order_Seq, ",
+                  " --       generation_number,",
+                  "          f_cell,",
+                  "          f_father,",
+                  "         f_project,",
+                  "--      f_level,",
+                  "        RIGHT('- - - - - - - - - - - -',generation_number*3) || f_cell",
+                  "     AS parent_child_tree",
+                  "FROM generation",
+                  "order by order_Seq ;",
+                  "",
+                  "*/</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select    f_hierarchy,",
+              "\tf_cell,",
+              "          f_father,",
+              "         f_project",
+              "FROM t_cell_tree",
+              "order by f_index",
+              "",
+              "",
+              "/* -- original query that built the hierarchy",
+              "",
+              "WITH RECURSIVE generation AS (",
+              "    SELECT f_cell,",
+              "         f_father,",
+              "         f_level,",
+              "f_project,",
+              "         0 AS generation_number, ",
+              "\t     f_cell as order_Seq ",
+              "    FROM t_cell_tree",
+              "    WHERE f_level = -1",
+              "\tand f_project = 'flc' --f_project = 'FLC_TC2'",
+              " UNION ALL",
+              "     SELECT child.f_cell,",
+              "         child.f_father,",
+              "         child.f_level,",
+              "         child.f_project,",
+              "         generation_number+1 AS generation_number,",
+              "\t     (order_seq || '||'||  child.f_cell ) as order_Seq",
+              "    FROM t_cell_tree child",
+              "    JOIN generation g",
+              "      ON g.f_cell = child.f_father",
+              "    where  child.f_project = 'flc'\t--child.f_project = 'FLC_TC2'\t",
+              ")",
+              "SELECT distinct order_Seq, ",
+              " --       generation_number,",
+              "          f_cell,",
+              "          f_father,",
+              "         f_project,",
+              "--      f_level,",
+              "        RIGHT('- - - - - - - - - - - -',generation_number*3) || f_cell",
+              "     AS parent_child_tree",
+              "FROM generation",
+              "order by order_Seq ;",
+              "",
+              "*/"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "t_cell_tree_path"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select    f_hierarchy,",
+              "\tf_cell,",
+              "          f_father,",
+              "         f_project",
+              "FROM t_cell_tree",
+              "order by f_index",
+              "",
+              "",
+              "/* -- original query that built the hierarchy",
+              "",
+              "WITH RECURSIVE generation AS (",
+              "    SELECT f_cell,",
+              "         f_father,",
+              "         f_level,",
+              "f_project,",
+              "         0 AS generation_number, ",
+              "\t     f_cell as order_Seq ",
+              "    FROM t_cell_tree",
+              "    WHERE f_level = -1",
+              "\tand f_project = 'flc' --f_project = 'FLC_TC2'",
+              " UNION ALL",
+              "     SELECT child.f_cell,",
+              "         child.f_father,",
+              "         child.f_level,",
+              "         child.f_project,",
+              "         generation_number+1 AS generation_number,",
+              "\t     (order_seq || '||'||  child.f_cell ) as order_Seq",
+              "    FROM t_cell_tree child",
+              "    JOIN generation g",
+              "      ON g.f_cell = child.f_father",
+              "    where  child.f_project = 'flc'\t--child.f_project = 'FLC_TC2'\t",
+              ")",
+              "SELECT distinct order_Seq, ",
+              " --       generation_number,",
+              "          f_cell,",
+              "          f_father,",
+              "         f_project,",
+              "--      f_level,",
+              "        RIGHT('- - - - - - - - - - - -',generation_number*3) || f_cell",
+              "     AS parent_child_tree",
+              "FROM generation",
+              "order by order_Seq ;",
+              "",
+              "*/</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Queryww",
+        "columns": [
+          {
+            "name": "Intel Year-Work Week",
+            "dataType": "int64",
+            "sourceColumn": "Intel Year-Work Week",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Queryww",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": "select distinct [Intel Year-Work Week] from  [V_TIME_DAY_CachedTable] where [Intel Year-Work Week] <= DATEPART(WW,GETDATE()) and  [Intel Year-Work Week] >  '202200' order by [Intel Year-Work Week] asc",
+              "dataSource": "CustomiBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct [Intel Year-Work Week] from  [V_TIME_DAY_CachedTable] where [Intel Year-Work Week] <= DATEPART(WW,GETDATE()) and  [Intel Year-Work Week] >  '202200' order by [Intel Year-Work Week] asc</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": "select distinct [Intel Year-Work Week] from  [V_TIME_DAY_CachedTable] where [Intel Year-Work Week] <= DATEPART(WW,GETDATE()) and  [Intel Year-Work Week] >  '202200' order by [Intel Year-Work Week] asc"
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Queryww"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct [Intel Year-Work Week] from  [V_TIME_DAY_CachedTable] where [Intel Year-Work Week] <= DATEPART(WW,GETDATE()) and  [Intel Year-Work Week] >  '202200' order by [Intel Year-Work Week] asc</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+          }
+        ]
+      },
+      {
+        "name": "Distinct_cell",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "f_cell",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "t_cell_tree_path[f_cell]"
+          },
+          {
+            "type": "calculated",
+            "name": "latest_Status",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "LOOKUPVALUE(alert_table[f_layout_status], alert_table[f_cell], Distinct_cell[f_cell], alert_table[f_commit], \"1\", alert_table[date_latest], \"latest\")"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "distinct(union(DISTINCT(t_cell_tree_path[f_cell]), distinct(rv_manual_data[f_cell])))"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Refresh_time",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Refresh Time",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Refresh Time]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": "ROW(\"Refresh Time\",NOW())"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Querylastprocess",
+        "columns": [
+          {
+            "name": "lastprocesseddate",
+            "dataType": "dateTime",
+            "sourceColumn": "lastprocesseddate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Querylastprocess",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct",
+                "dateadd(hour, -7, getutcdate()) as lastprocesseddate",
+                "from [ipg_devsuborg_cached]"
+              ],
+              "dataSource": "CustomiBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+                  "dateadd(hour, -7, getutcdate()) as lastprocesseddate",
+                  "from [ipg_devsuborg_cached]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct",
+              "dateadd(hour, -7, getutcdate()) as lastprocesseddate",
+              "from [ipg_devsuborg_cached]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Querylastprocess"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+              "dateadd(hour, -7, getutcdate()) as lastprocesseddate",
+              "from [ipg_devsuborg_cached]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rv_manual_data",
+        "columns": [
+          {
+            "name": "f_id",
+            "dataType": "int64",
+            "sourceColumn": "f_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "f_cell",
+            "dataType": "string",
+            "sourceColumn": "f_cell",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_de_owner",
+            "dataType": "string",
+            "sourceColumn": "f_de_owner",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_de_leader",
+            "dataType": "string",
+            "sourceColumn": "f_de_leader",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_md_owner",
+            "dataType": "string",
+            "sourceColumn": "f_md_owner",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_status_comment",
+            "dataType": "string",
+            "sourceColumn": "f_status_comment",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_method",
+            "dataType": "string",
+            "sourceColumn": "f_method",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_waive",
+            "dataType": "string",
+            "sourceColumn": "f_waive",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_layout_status",
+            "dataType": "string",
+            "sourceColumn": "f_layout_status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_stime",
+            "dataType": "dateTime",
+            "sourceColumn": "f_stime",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "f_etime",
+            "dataType": "dateTime",
+            "sourceColumn": "f_etime",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "f_db_mng_comments",
+            "dataType": "string",
+            "sourceColumn": "f_db_mng_comments",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_notify",
+            "dataType": "string",
+            "sourceColumn": "f_notify",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "f_project",
+            "dataType": "string",
+            "sourceColumn": "f_project",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "latest",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF([f_stime] = CALCULATE(max([f_stime]), FILTER(rv_manual_data, rv_manual_data[f_cell] = EARLIEST(rv_manual_data[f_cell]))), \"latest\")"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "rv_manual_data",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select * from ",
+                "t_rv_owners"
+              ],
+              "dataSource": "actis_db"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+                  "t_rv_owners</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select * from ",
+              "t_rv_owners"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "rv_manual_data"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * from ",
+              "t_rv_owners</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "ffbfc2ff-f867-4d51-af7b-d97971af890b",
+        "toCardinality": "many",
+        "fromTable": "t_cell_tree_path",
+        "fromColumn": "f_cell",
+        "toTable": "alert_table",
+        "toColumn": "f_cell",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "9e2a5423-139a-4c2c-ac50-1c9255f53580",
+        "fromTable": "t_cell_tree_path",
+        "fromColumn": "f_cell",
+        "toTable": "Distinct_cell",
+        "toColumn": "f_cell",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "c2a47594-dd04-408c-8015-de5e17c01061",
+        "toCardinality": "many",
+        "fromTable": "rv_manual_data",
+        "fromColumn": "f_cell",
+        "toTable": "t_cell_tree_path",
+        "toColumn": "f_cell",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "8363bd39-0ee8-4008-a2f2-6877d37447e9",
+        "fromTable": "alert_table",
+        "fromColumn": "f_cell",
+        "toTable": "Distinct_cell",
+        "toColumn": "f_cell"
+      }
+    ],
+    "roles": [
+      {
+        "name": "IPG_Developers",
+        "modelPermission": "administrator",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_Developers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603422"
+          }
+        ]
+      },
+      {
+        "name": "IPG_Internal",
+        "modelPermission": "readRefresh",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_SuperUsers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603439"
+          }
+        ]
+      },
+      {
+        "name": "IPG_External",
+        "modelPermission": "readRefresh",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_Users",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603440"
+          }
+        ]
+      },
+      {
+        "name": "Faceless",
+        "members": [
+          {
+            "memberName": "AMR\\SSAS_MSBITABMD",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-2406644"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
